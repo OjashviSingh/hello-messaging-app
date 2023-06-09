@@ -1,13 +1,22 @@
 package com.Spring.hellomessaging.hellomessaging.controller;
 
 public class UserController {
-    private String name;
+    private String fName;
+    private String lName;
 
-    public String getName() {
-        return name;
+    public String getfName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
     }
 }
