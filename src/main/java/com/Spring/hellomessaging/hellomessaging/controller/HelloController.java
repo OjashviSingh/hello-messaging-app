@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 public class HelloController {
     @GetMapping
-    public String greetHello(){
+    public String greetHello() {
         return "Hello from BridgeLabz";
     }
+
     @GetMapping("/hello/query")
     public String sayHello(@RequestParam("name") String name) {
         return "Hello " + name + " from BridgeLabz";
@@ -22,5 +23,10 @@ public class HelloController {
     @PostMapping("/hello/post")
     public String sayHello(@RequestBody UserController user) {
         return "Hello " + user.getfName() + " " + user.getlName() + " from BridgeLabz";
+    }
+
+    @PutMapping("/hello/put/{firstName}")
+    public String sayHello(@PathVariable("firstName") String fName, @RequestParam("lastName") String lName) {
+        return "Hello " + fName + " " + lName + " from BridgeLabz";
     }
 }
